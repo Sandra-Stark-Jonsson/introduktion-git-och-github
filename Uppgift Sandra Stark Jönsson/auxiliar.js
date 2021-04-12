@@ -28,3 +28,5 @@ function getColor(scheme, index) {
 function removeClassFromElement(element, className) {
     element && element.classList.remove(className);
 }
+
+//hej hej hej
