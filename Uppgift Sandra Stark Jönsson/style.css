@@ -1,0 +1,108 @@
+:root {
+    --size: 150px;
+    --color1: gold;
+    --color2: orange;
+    --color3: yellow;
+    --color4: wheat;
+    --color5: indianred;
+}
+
+body {
+    margin: 0%;
+    height: 100vh;
+}
+
+#menu {
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#container {
+    width: 100vw;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color5);
+}
+
+#bigger, #stop, #smaller {
+    height: 6vh;
+    width: 20vw;
+    position: absolute;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2vh;
+    top: 1vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid black;
+}
+#bigger { left: 1vw;}
+#smaller { right: 1vw;}
+#stop { left: calc(50% - 10vw);}
+
+#first, #second, #third, #rotate, #circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#first {
+    height: var(--size);
+    width: var(--size);
+    position: absolute;
+    transition-property: height, width, top, left;
+    transition-duration: 7000ms;
+    background-color: var(--color2);
+}
+#second {
+    background-color: var(--color3);
+}
+#third {
+    background-color: var(--color4);
+}
+#first > div, #first > div > div {
+    width: 90%;
+    height: 90%;
+}
+#rotate {
+    height: var(--size);
+    width: var(--size);
+    transform: rotate(45deg);
+    transition-property: height, width, top, left;
+    transition-duration: 7000ms;
+    background-color: var(--color1);
+}
+#circle {
+    height: var(--size);
+    width: var(--size);
+    border-radius: 50%;
+    transition-property: height, width, top, left;
+    transition-duration: 7000ms;
+    background-color: var(--color5);
+}
+
+#menu > div {
+    height: 90%;
+    width: 24vw;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border: 1px solid black;
+}
+
+#menu > div > div {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 80%;
+}
+
+.active {
+    box-shadow: 1px 1px 5px black;
+}
